@@ -2,4 +2,4 @@
 
 Greetings from the NeoPixel.
 
-![hi written on the neopixel](assets/neopixel-hi.pn)
+![hi written on the neopixel](assets/neopixel-hi.png)
