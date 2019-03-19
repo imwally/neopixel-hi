@@ -1,2 +1,5 @@
 # neopixel-hi
-Hello, NeoPIxel
+
+Greetings from the NeoPixel.
+
+![hi written on the neopixel](assets/neopixel-hi.pn)
