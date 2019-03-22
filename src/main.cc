@@ -3,7 +3,7 @@
 
 #define PIXELS 32
 #define PIN 6
-#define MAX_BRIGHTNESS 40
+#define MAX_BRIGHTNESS 20
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
