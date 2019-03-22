@@ -50,7 +50,7 @@ void printGrid(int grid[HEIGHT][WIDTH]) {
 void shiftGrid(int grid[HEIGHT][WIDTH]) {
         for (int i = 0; i < HEIGHT; i++) {
                 // Remember first element for when the index reaches the end
-                // because by then the first element would have ben shifted
+                // because by then the first element would have been shifted
                 // over and would no longer exist.
                 int first = grid[i][0];
                 for (int j = 0; j < WIDTH; j++) {
