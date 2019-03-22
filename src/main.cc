@@ -57,7 +57,7 @@ void shiftGrid(int grid[HEIGHT][WIDTH]) {
                         if (j == WIDTH-1) {
                                 grid[i][j] = first;
                         } else {
-                                grid[i][j] = grid[i][(j+1)%WIDTH];
+                                grid[i][j] = grid[i][j+1];
                         }
                 }
         }
