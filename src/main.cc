@@ -9,10 +9,10 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(PIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 
 int grid[HEIGHT][WIDTH] = {
-        {0,1,0,1,0,1,0,0},
-        {0,1,0,1,0,0,0,0},
-        {0,1,1,1,0,1,0,0},
-        {0,1,0,1,0,1,0,0},
+        {1,0,1,0,1,0,0,0},
+        {1,0,1,0,0,0,0,0},
+        {1,1,1,0,1,0,0,0},
+        {1,0,1,0,1,0,0,0},
 };
 
 
@@ -49,8 +49,16 @@ void printGrid(int grid[HEIGHT][WIDTH]) {
 
 void shiftGrid(int grid[HEIGHT][WIDTH]) {
         for (int i = 0; i < HEIGHT; i++) {
+                // Remember first element for when the index reaches the end
+                // because by then the first element would have ben shifted
+                // over and would no longer exist.
+                int first = grid[i][0];
                 for (int j = 0; j < WIDTH; j++) {
-                        grid[i][j] = grid[i][(j+1)%(WIDTH-1)];
+                        if (j == WIDTH-1) {
+                                grid[i][j] = first;
+                        } else {
+                                grid[i][j] = grid[i][(j+1)%WIDTH];
+                        }
                 }
         }
 }
